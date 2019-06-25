@@ -1,32 +1,32 @@
 <h2>Register</h2>
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-        <label for="voornaam">First Name</label>
-        <input type="text" formControlName="voornaam" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.voornaam.errors }" />
-        <div *ngIf="submitted && f.voornaam.errors" class="invalid-feedback">
-            <div *ngIf="f.voornaam.errors.required">First Name is required</div>
+        <label for="voornaam">Voornaam</label>
+        <input type="text" formControlName="voornaam" class="form-control" [ngClass]="{ 'is-invalid': submitted && getter.voornaam.errors }" />
+        <div *ngIf="submitted && getter.voornaam.errors" class="invalid-feedback">
+            <div *ngIf="getter.voornaam.errors.required">Voornaam is verplicht</div>
         </div>
     </div>
     <div class="form-group">
-        <label for="achternaam">Last Name</label>
-        <input type="text" formControlName="achternaam" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.achternaam.errors }" />
-        <div *ngIf="submitted && f.achternaam.errors" class="invalid-feedback">
-            <div *ngIf="f.achternaam.errors.required">Last Name is required</div>
+        <label for="achternaam">Achternaam</label>
+        <input type="text" formControlName="achternaam" class="form-control" [ngClass]="{ 'is-invalid': submitted && getter.achternaam.errors }" />
+        <div *ngIf="submitted && getter.achternaam.errors" class="invalid-feedback">
+            <div *ngIf="getter.achternaam.errors.required">Achternaam is verplicht</div>
         </div>
     </div>
     <div class="form-group">
-        <label for="gebruiksnaam">Username</label>
-        <input type="text" formControlName="gebruiksnaam" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.gebruiksnaam.errors }" />
-        <div *ngIf="submitted && f.gebruiksnaam.errors" class="invalid-feedback">
-            <div *ngIf="f.gebruiksnaam.errors.required">Username is required</div>
+        <label for="gebruiksnaam">Gebruiksnaam</label>
+        <input type="text" formControlName="gebruiksnaam" class="form-control" [ngClass]="{ 'is-invalid': submitted && getter.gebruiksnaam.errors }" />
+        <div *ngIf="submitted && getter.gebruiksnaam.errors" class="invalid-feedback">
+            <div *ngIf="getter.gebruiksnaam.errors.required">Gebruiksnaam is verplicht</div>
         </div>
     </div>
     <div class="form-group">
-        <label for="wachtwoord">Password</label>
-        <input type="wachtwoord" formControlName="wachtwoord" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.wachtwoord.errors }" />
-        <div *ngIf="submitted && f.wachtwoord.errors" class="invalid-feedback">
-            <div *ngIf="f.wachtwoord.errors.required">Password is required</div>
-            <div *ngIf="f.wachtwoord.errors.minlength">Password must be at least 6 characters</div>
+        <label for="wachtwoord">Wachtwoord</label>
+        <input type="wachtwoord" formControlName="wachtwoord" class="form-control" [ngClass]="{ 'is-invalid': submitted && getter.wachtwoord.errors }" />
+        <div *ngIf="submitted && getter.wachtwoord.errors" class="invalid-feedback">
+            <div *ngIf="getter.wachtwoord.errors.required">Wachtwoord is verplicht</div>
+            <div *ngIf="getter.wachtwoord.errors.minlength">Wachtwoord moet langer dan 6 karakters</div>
         </div>
     </div>
     <div class="form-group">
